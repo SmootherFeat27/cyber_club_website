@@ -8,21 +8,24 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
+        /* ==========================================================================
+           Root Variables & Global Styles
+           ========================================================================== */
         :root {
-            --primary-navy: #0f172a;
-            --brand-blue: #1e3a8a;
-            --brand-accent: #2563eb;
-            --brand-gold: #d97706;
-            --text-primary: #1e293b;
-            --text-muted: #64748b;
-            --bg-light: #f8fafc;
-            --border-color: #e2e8f0;
+            --primary-navy: #0F172A;
+            --brand-blue: #1E3A8A;
+            --brand-accent: #2563EB;
+            --brand-gold: #D97706;
+            --text-primary: #1E293B;
+            --text-muted: #64748B;
+            --bg-light: #F8FAFC;
+            --border-color: #E2E8F0;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
@@ -33,12 +36,15 @@
         }
 
         body {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             color: var(--text-primary);
             font-family: var(--font-sans);
             line-height: 1.6;
         }
 
+        /* ==========================================================================
+           Layout Containers
+           ========================================================================== */
         .container {
             max-width: 1140px;
             margin: 0 auto;
@@ -51,10 +57,20 @@
             padding: 0 1.5rem;
         }
 
-        /* Top Bar */
+        .section-padding {
+            padding: 4.5rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        /* ==========================================================================
+           Header & Top Bar
+           ========================================================================== */
         .top-bar {
             background-color: var(--primary-navy);
-            color: #94a3b8;
+            color: #94A3B8;
             font-size: 0.8rem;
             padding: 8px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -67,13 +83,17 @@
         }
 
         .top-bar a {
-            color: #cbd5e1;
+            color: #CBD5E1;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        /* Navbar */
+        .top-bar a:hover {
+            color: #FFFFFF;
+        }
+
         .navbar-formal {
-            background: #ffffff;
+            background: #FFFFFF;
             border-bottom: 1px solid var(--border-color);
             padding: 1rem 0;
             position: sticky;
@@ -128,39 +148,43 @@
             transition: color 0.2s ease;
         }
 
-        .nav-link:hover, .nav-link.active {
+        .nav-link:hover, 
+        .nav-link.active {
             color: var(--brand-blue);
         }
 
-        /* Buttons */
+        /* ==========================================================================
+           Buttons & Action Elements
+           ========================================================================== */
         .btn-formal-primary {
             background-color: var(--brand-blue);
-            color: #ffffff;
-            padding: 0.65rem 1.25rem;
-            border-radius: 6px;
+            color: #FFFFFF;
+            padding: 0.6rem 1.25rem;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
             border: 1px solid var(--brand-blue);
             cursor: pointer;
             display: inline-block;
-            transition: background 0.2s ease;
+            transition: background-color 0.2s ease;
         }
 
         .btn-formal-primary:hover {
-            background-color: #1e40af;
+            background-color: #1E40AF;
         }
 
         .btn-formal-outline {
             background-color: transparent;
             color: var(--primary-navy);
-            padding: 0.65rem 1.25rem;
-            border-radius: 6px;
+            padding: 0.6rem 1.25rem;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
             border: 1px solid var(--border-color);
             display: inline-block;
+            transition: background-color 0.2s ease;
         }
 
         .btn-formal-outline:hover {
@@ -172,10 +196,12 @@
             text-align: center;
         }
 
-        /* Hero Section */
+        /* ==========================================================================
+           Hero Section
+           ========================================================================== */
         .hero-formal {
             padding: 5rem 0;
-            background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%);
+            background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-light) 100%);
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -216,11 +242,10 @@
             gap: 1rem;
         }
 
-        /* Metrics Card */
         .hero-metrics-card {
-            background: #ffffff;
+            background: #FFFFFF;
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 2rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
@@ -252,15 +277,9 @@
             font-weight: 500;
         }
 
-        /* Sections */
-        .section-padding {
-            padding: 4.5rem 0;
-        }
-
-        .bg-light {
-            background-color: var(--bg-light);
-        }
-
+        /* ==========================================================================
+           Section Headers
+           ========================================================================== */
         .section-header-formal {
             margin-bottom: 3rem;
             text-align: center;
@@ -278,7 +297,9 @@
             font-size: 1rem;
         }
 
-        /* Event Row Cards */
+        /* ==========================================================================
+           Events & Programs Section
+           ========================================================================== */
         .events-list {
             display: flex;
             flex-direction: column;
@@ -286,7 +307,7 @@
         }
 
         .event-row-card {
-            background: #ffffff;
+            background: #FFFFFF;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.5rem;
@@ -332,7 +353,7 @@
         .event-category-badge {
             font-size: 0.7rem;
             font-weight: 700;
-            background: #eff6ff;
+            background: #EFF6FF;
             color: var(--brand-blue);
             padding: 2px 8px;
             border-radius: 4px;
@@ -342,7 +363,7 @@
         }
 
         .event-category-badge.gold {
-            background: #fef3c7;
+            background: #FEF3C7;
             color: var(--brand-gold);
         }
 
@@ -365,9 +386,11 @@
             color: var(--text-muted);
         }
 
-        /* Table */
+        /* ==========================================================================
+           CTF Leaderboard Table
+           ========================================================================== */
         .table-container-formal {
-            background: #ffffff;
+            background: #FFFFFF;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
@@ -408,17 +431,19 @@
             color: var(--text-muted);
         }
 
-        .rank-1 { background: #fef3c7; color: #92400e; }
-        .rank-2 { background: #f1f5f9; color: #475569; }
-        .rank-3 { background: #ffedd5; color: #9a3412; }
+        .rank-1 { background: #FEF3C7; color: #92400E; }
+        .rank-2 { background: #F1F5F9; color: #475569; }
+        .rank-3 { background: #FFEDD5; color: #9A3412; }
 
         .subtext-id {
             font-size: 0.8rem;
             color: var(--text-muted);
-            font-weight: normal;
+            font-weight: 400;
         }
 
-        /* Executive Board */
+        /* ==========================================================================
+           Executive Board Cards
+           ========================================================================== */
         .board-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -426,7 +451,7 @@
         }
 
         .board-card {
-            background: #ffffff;
+            background: #FFFFFF;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.5rem;
@@ -438,7 +463,7 @@
             height: 60px;
             border-radius: 50%;
             background: var(--brand-blue);
-            color: #ffffff;
+            color: #FFFFFF;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -464,18 +489,20 @@
             color: var(--text-muted);
         }
 
-        /* Terminal */
+        /* ==========================================================================
+           Command Line Terminal Interface
+           ========================================================================== */
         .formal-terminal {
             background: var(--primary-navy);
             border-radius: 8px;
             overflow: hidden;
-            color: #f1f5f9;
+            color: #F1F5F9;
             font-family: monospace;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
 
         .terminal-header-bar {
-            background: #1e293b;
+            background: #1E293B;
             padding: 0.75rem 1rem;
             display: flex;
             justify-content: space-between;
@@ -484,7 +511,7 @@
         }
 
         .status-indicator-online {
-            color: #22c55e;
+            color: #22C55E;
         }
 
         .terminal-body-content {
@@ -498,22 +525,24 @@
         }
 
         .prompt-symbol {
-            color: #38bdf8;
+            color: #38BDF8;
         }
 
         .formal-terminal-input {
             background: transparent;
             border: none;
-            color: #ffffff;
+            color: #FFFFFF;
             font-family: monospace;
             font-size: 0.95rem;
             width: 100%;
             outline: none;
         }
 
-        /* Forms */
+        /* ==========================================================================
+           Grievances & Feedback Form
+           ========================================================================== */
         .formal-form-container {
-            background: #ffffff;
+            background: #FFFFFF;
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 2rem;
@@ -531,7 +560,8 @@
             margin-bottom: 0.5rem;
         }
 
-        .formal-select, .formal-textarea {
+        .formal-select, 
+        .formal-textarea {
             width: 100%;
             padding: 0.75rem;
             border: 1px solid var(--border-color);
@@ -539,19 +569,23 @@
             font-family: var(--font-sans);
             font-size: 0.95rem;
             outline: none;
+            transition: border-color 0.2s ease;
         }
 
-        .formal-select:focus, .formal-textarea:focus {
+        .formal-select:focus, 
+        .formal-textarea:focus {
             border-color: var(--brand-accent);
         }
 
-        /* Footer */
+        /* ==========================================================================
+           Footer
+           ========================================================================== */
         .formal-footer {
             background: var(--primary-navy);
-            color: #94a3b8;
+            color: #94A3B8;
             padding: 2.5rem 0;
             font-size: 0.85rem;
-            border-top: 1px solid #1e293b;
+            border-top: 1px solid #1E293B;
         }
 
         .footer-content {
@@ -560,18 +594,54 @@
             align-items: center;
         }
 
-        .footer-right a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin-left: 1.5rem;
+        .footer-subtext {
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
         }
 
-        /* Responsive */
+        .footer-right a {
+            color: #CBD5E1;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-right a:hover {
+            color: #FFFFFF;
+        }
+
+        /* ==========================================================================
+           Responsive Design Breakpoints
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .board-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
-            .hero-grid { grid-template-columns: 1fr; }
-            .board-grid { grid-template-columns: 1fr 1fr; }
-            .event-row-card { flex-direction: column; align-items: flex-start; }
-            .nav-menu { display: none; }
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-row-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-right a {
+                margin: 0 0.75rem;
+            }
         }
     </style>
 </head>
