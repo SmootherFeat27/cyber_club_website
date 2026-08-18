@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Club - KRMU</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fa-solid fa-shield-halved"></i> CYBERSECURITY CLUB <span style="font-size:0.7rem; color:var(--text-muted);">KRMU</span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#leaderboard">CTF Arena</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#complaints">Complaint Box</a></li>
+            </ul>
+        </nav>
+        <button class="btn-glow" onclick="scrollToSection('events')">JOIN US</button>
+    </header>
+
+    <div class="container">
+        
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero-text">
+                <span style="color:var(--primary); font-size: 0.8rem; letter-spacing: 2px;">LEARN. HACK. DEFEND.</span>
+                <h1>SECURE TODAY,<br><span>SAFE TOMORROW.</span></h1>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Building a community of future cyber defenders, ethical hackers, and security researchers.</p>
+                <button class="btn-glow" onclick="scrollToSection('events')">EXPLORE EVENTS</button>
+            </div>
+            <div class="hero-stats">
+                <div style="color:var(--primary); font-size:0.8rem; margin-bottom:1rem;"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> SYSTEM STATUS: ONLINE</div>
+                <div class="stat-row"><span>THREAT LEVEL</span> <span style="color:var(--primary);">LOW</span></div>
+                <div class="stat-row"><span>ACTIVE MEMBERS</span> <span>247</span></div>
+                <div class="stat-row"><span>CTFs COMPLETED</span> <span>18</span></div>
+                <div class="stat-row"><span>PROJECTS BUILT</span> <span>12</span></div>
+            </div>
+        </section>
+
+        <!-- WEEKLY EVENTS & REGISTRATION -->
+        <section id="events">
+            <h2 class="section-title">Upcoming Weekly Events</h2>
+            <p class="section-subtitle">Click register to open the official registration form</p>
+            
+            <div id="events-list">
+                <div class="event-card">
+                    <div class="event-banner"><i class="fa-solid fa-code"></i></div>
+                    <div style="flex:1;">
+                        <h3>Web Security Workshop</h3>
+                        <p style="color:var(--text-muted); font-size: 0.85rem;">Learn OWASP Top 10 vulnerabilities & exploitation techniques.</p>
+                        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--primary);">
+                            <i class="fa-regular fa-calendar"></i> May 24, 2026 | <i class="fa-regular fa-clock"></i> 10:00 AM
+                        </div>
+                    </div>
+                    <button class="btn-glow" onclick="redirectToForm('web-sec')">Register <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></button>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-banner"><i class="fa-solid fa-flag"></i></div>
+                    <div style="flex:1;">
+                        <h3>Capture The Flag - Nightfall</h3>
+                        <p style="color:var(--text-muted); font-size: 0.85rem;">Test your skills in our 6-hour Jeopardy-style internal CTF.</p>
+                        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--primary);">
+                            <i class="fa-regular fa-calendar"></i> May 31, 2026 | <i class="fa-regular fa-clock"></i> 06:00 PM
+                        </div>
+                    </div>
+                    <button class="btn-glow" onclick="redirectToForm('ctf-nightfall')">Register <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTF LEADERBOARD -->
+        <section id="leaderboard">
+            <h2 class="section-title">CTF Leaderboard</h2>
+            <p class="section-subtitle">Top-performing hackers of the current season</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player / Handle</th>
+                            <th>Points</th>
+                            <th>CTFs Solved</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1 🏆</td>
+                            <td><strong>0xShadow</strong></td>
+                            <td>1240</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>#2 🥈</td>
+                            <td><strong>CyberWolf</strong></td>
+                            <td>1090</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>#3 🥉</td>
+                            <td><strong>RootX</strong></td>
+                            <td>980</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>#4</td>
+                            <td>ByteBuster</td>
+                            <td>870</td>
+                            <td>9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TEAM MEMBERS -->
+        <section id="team">
+            <h2 class="section-title">Our Core Team</h2>
+            <p class="section-subtitle">Meet the minds behind the club</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+                    <h4>Arnav Kotriwar</h4>
+                    <p style="color:var(--primary); font-size:0.8rem;">President</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                    <h4>Ishita Sharma</h4>
+                    <p style="color:var(--primary); font-size:0.8rem;">Vice President</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fa-solid fa-terminal"></i></div>
+                    <h4>Rohan Verma</h4>
+                    <p style="color:var(--primary); font-size:0.8rem;">Technical Lead</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><i class="fa-solid fa-bug"></i></div>
+                    <h4>Mehak Jain</h4>
+                    <p style="color:var(--primary); font-size:0.8rem;">CTF Lead</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE TERMINAL -->
+        <section>
+            <div class="terminal">
+                <div class="terminal-header">> CLUB_TERMINAL (v1.0.4) - Type 'help' for available commands</div>
+                <div id="terminal-output"></div>
+                <div style="display: flex;">
+                    <span>>&nbsp;</span>
+                    <input type="text" id="terminal-input" class="terminal-input">
+                </div>
+            </div>
+        </section>
+
+        <!-- ANONYMOUS COMPLAINT BOX -->
+        <section id="complaints" class="card">
+            <h2 class="section-title" style="text-align: left;"><i class="fa-solid fa-box-archive"></i> Anonymous Complaint & Feedback Box</h2>
+            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1.5rem;">Have issues, suggestions, or reports? Submit anonymously to the admin board.</p>
+            
+            <form id="complaintForm" onsubmit="submitComplaint(event)">
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="complaintCategory">
+                        <option value="events-workshops">Events, Workshops & CTFs</option>
+                        <option value="technical-platform">Website & Technical Platform Issues</option>
+                        <option value="club-management">Club Management & Leadership</option>
+                        <option value="peer-behavior">Member Behavior & Misconduct</option>
+                        <option value="academics-curriculum">Curriculum & Learning Content</option>
+                        <option value="resources-infra">Lab, Infrastructure & Resources</option>
+                        <option value="ideas-suggestions">New Ideas & Feature Suggestions</option>
+                        <option value="other">Other / General Concerns</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Your Complaint / Feedback (Encrypted Submission)</label>
+                    <textarea id="complaintMessage" rows="4" placeholder="Describe your concern here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-glow">Submit Feedback</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
