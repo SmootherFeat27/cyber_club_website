@@ -575,62 +575,6 @@
         }
 
         /* ==========================================================================
-           Command Line Terminal Interface
-           ========================================================================== */
-        .formal-terminal {
-            background: var(--primary-navy);
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            color: #F1F5F9;
-            font-family: 'Courier New', Courier, monospace;
-            box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.25);
-            border: 1px solid #334155;
-        }
-
-        .terminal-header-bar {
-            background: #1E293B;
-            padding: 0.85rem 1.25rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.825rem;
-            border-bottom: 1px solid #334155;
-        }
-
-        .status-indicator-online {
-            color: #22C55E;
-            font-weight: 600;
-        }
-
-        .terminal-body-content {
-            padding: 1.75rem;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .terminal-input-row {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-top: 1.25rem;
-        }
-
-        .prompt-symbol {
-            color: #38BDF8;
-            font-weight: bold;
-        }
-
-        .formal-terminal-input {
-            background: transparent;
-            border: none;
-            color: #FFFFFF;
-            font-family: inherit;
-            font-size: 0.95rem;
-            width: 100%;
-            outline: none;
-        }
-
-        /* ==========================================================================
            Grievances & Feedback Form
            ========================================================================== */
         .formal-form-container {
@@ -654,7 +598,8 @@
         }
 
         .formal-select, 
-        .formal-textarea {
+        .formal-textarea,
+        .formal-input {
             width: 100%;
             padding: 0.85rem 1rem;
             border: 1px solid var(--border-color);
@@ -668,9 +613,31 @@
         }
 
         .formal-select:focus, 
-        .formal-textarea:focus {
+        .formal-textarea:focus,
+        .formal-input:focus {
             border-color: var(--brand-accent);
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .alert-box {
+            display: none;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .alert-success {
+            background-color: #DEF7EC;
+            color: #03543F;
+            border: 1px solid #84E1BC;
+        }
+
+        .alert-danger {
+            background-color: #FDE8E8;
+            color: #9B1C1C;
+            border: 1px solid #F8B4B4;
         }
 
         /* ==========================================================================
@@ -951,65 +918,35 @@
 
                 <div class="board-grid">
                     <div class="board-card">
-                        <div class="board-avatar-placeholder">AK</div>
-                        <h4>Arnav Kotriwar</h4>
-                        <span class="board-role">President</span>
-                        <p class="board-dept">Department of Computer Science</p>
+                        <div class="board-avatar-placeholder">PL</div>
+                        <h4>President Lead</h4>
+                        <span class="board-role">Executive President</span>
+                        <p class="board-dept">Dept. of Computer Science & Engineering</p>
                     </div>
-
                     <div class="board-card">
-                        <div class="board-avatar-placeholder">IS</div>
-                        <h4>Ishita Sharma</h4>
-                        <span class="board-role">Vice President</span>
-                        <p class="board-dept">Department of Information Technology</p>
+                        <div class="board-avatar-placeholder">VP</div>
+                        <h4>Vice President</h4>
+                        <span class="board-role">Operations & Strategy</span>
+                        <p class="board-dept">Dept. of Cyber Security & Forensics</p>
                     </div>
-
                     <div class="board-card">
-                        <div class="board-avatar-placeholder">RV</div>
-                        <h4>Rohan Verma</h4>
-                        <span class="board-role">Technical Lead</span>
-                        <p class="board-dept">Cybersecurity Research Group</p>
+                        <div class="board-avatar-placeholder">TL</div>
+                        <h4>Technical Lead</h4>
+                        <span class="board-role">CTF & Labs Lead</span>
+                        <p class="board-dept">Dept. of Computer Science & Engineering</p>
                     </div>
-
                     <div class="board-card">
-                        <div class="board-avatar-placeholder">MJ</div>
-                        <h4>Mehak Jain</h4>
-                        <span class="board-role">CTF Program Lead</span>
-                        <p class="board-dept">Department of Computer Science</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TERMINAL INTERACTION SECTION -->
-        <section class="section-padding">
-            <div class="container">
-                <div class="section-header-formal">
-                    <span class="section-tag">System Interface</span>
-                    <h2>Command Line Interface</h2>
-                    <p>A functional console interface for automated query lookup and system verification.</p>
-                </div>
-
-                <div class="formal-terminal">
-                    <div class="terminal-header-bar">
-                        <span class="terminal-system-name">KRMU-SEC-TERMINAL // v2.4.0</span>
-                        <span class="status-indicator-online">● Operational</span>
-                    </div>
-                    <div class="terminal-body-content">
-                        <div id="terminal-output">
-                            <p>Type <code>help</code> to display system diagnostics and query options.</p>
-                        </div>
-                        <div class="terminal-input-row">
-                            <span class="prompt-symbol">krmu-sec:~#</span>
-                            <input type="text" id="terminal-input" class="formal-terminal-input" autocomplete="off" placeholder="enter command...">
-                        </div>
+                        <div class="board-avatar-placeholder">GS</div>
+                        <h4>General Secretary</h4>
+                        <span class="board-role">Administration & Logistics</span>
+                        <p class="board-dept">Dept. of Information Technology</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ANONYMOUS COMPLAINT & FEEDBACK FORM -->
-        <section id="complaints" class="section-padding bg-light">
+        <section id="complaints" class="section-padding">
             <div class="container container-narrow">
                 <div class="section-header-formal">
                     <span class="section-tag">Compliance & Governance</span>
@@ -1018,27 +955,62 @@
                 </div>
 
                 <div class="formal-form-container">
+                    <!-- Status Notification Box -->
+                    <div id="formAlert" class="alert-box"></div>
+
                     <form id="complaintForm" onsubmit="submitComplaint(event)">
+                        <!-- WEB3FORMS ACCESS KEY -->
+                        <input type="hidden" name="access_key" value="b048517d-3172-4533-ba7e-90a73e11155c">
+                        
+                        <!-- Web3Forms Optional Settings -->
+                        <input type="hidden" name="subject" value="New Grievance Ticket Received [KRMU Cyber Club]">
+                        <input type="hidden" name="from_name" value="KRMU Grievance Portal">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!-- Category -->
                         <div class="form-group-formal">
-                            <label for="complaintCategory">Classification Category</label>
-                            <select id="complaintCategory" class="formal-select">
-                                <option value="events-workshops">Events, Workshops & CTFs</option>
-                                <option value="technical-platform">Website & Technical Platform Issues</option>
-                                <option value="club-management">Club Management & Leadership</option>
-                                <option value="peer-behavior">Member Behavior & Misconduct</option>
-                                <option value="academics-curriculum">Curriculum & Learning Content</option>
-                                <option value="resources-infra">Lab, Infrastructure & Resources</option>
-                                <option value="ideas-suggestions">New Ideas & Feature Suggestions</option>
-                                <option value="other">Other / General Concerns</option>
+                            <label for="complaintCategory">Classification Category *</label>
+                            <select id="complaintCategory" name="Category" class="formal-select" required>
+                                <option value="" disabled selected>-- Select Classification --</option>
+                                <option value="Events, Workshops & CTFs">Events, Workshops & CTFs</option>
+                                <option value="Website & Technical Platform">Website & Technical Platform Issues</option>
+                                <option value="Club Management & Leadership">Club Management & Leadership</option>
+                                <option value="Member Behavior & Misconduct">Member Behavior & Misconduct</option>
+                                <option value="Curriculum & Learning Content">Curriculum & Learning Content</option>
+                                <option value="Lab, Infrastructure & Resources">Lab, Infrastructure & Resources</option>
+                                <option value="New Ideas & Feature Suggestions">New Ideas & Feature Suggestions</option>
+                                <option value="Other / General Concerns">Other / General Concerns</option>
                             </select>
                         </div>
 
+                        <!-- Submission Mode -->
                         <div class="form-group-formal">
-                            <label for="complaintMessage">Detailed Statement / Grievance Report</label>
-                            <textarea id="complaintMessage" class="formal-textarea" rows="5" placeholder="Provide a detailed, objective statement regarding your concern..." required></textarea>
+                            <label for="identityType">Submission Mode</label>
+                            <select id="identityType" name="Submission Mode" class="formal-select" onchange="toggleContactFields(this.value)">
+                                <option value="Anonymous" selected>Anonymous Submission (Default)</option>
+                                <option value="Identified">Provide Contact Details (for direct follow-up)</option>
+                            </select>
                         </div>
 
-                        <button type="submit" class="btn-formal-primary btn-block">Submit Report Securely</button>
+                        <!-- Optional Contact Fields -->
+                        <div id="contactFields" style="display: none;">
+                            <div class="form-group-formal">
+                                <label for="reporterName">Your Name</label>
+                                <input type="text" id="reporterName" name="Reporter Name" class="formal-input" placeholder="e.g., Alex Johnson">
+                            </div>
+                            <div class="form-group-formal">
+                                <label for="reporterEmail">Contact Email</label>
+                                <input type="email" id="reporterEmail" name="email" class="formal-input" placeholder="e.g., alex@university.edu">
+                            </div>
+                        </div>
+
+                        <!-- Statement Area -->
+                        <div class="form-group-formal">
+                            <label for="complaintMessage">Detailed Statement / Grievance Report *</label>
+                            <textarea id="complaintMessage" name="Grievance Statement" class="formal-textarea" rows="5" placeholder="Provide a detailed, objective statement regarding your concern..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn-formal-primary btn-block">Submit Report Securely</button>
                     </form>
                 </div>
             </div>
@@ -1046,22 +1018,77 @@
 
     </main>
 
-    <!-- FORMAL FOOTER -->
+    <!-- FOOTER -->
     <footer class="formal-footer">
         <div class="container footer-content">
             <div class="footer-left">
-                <p><strong>Cybersecurity Club — K.R. Mangalam University</strong></p>
-                <p class="footer-subtext">&copy; 2026 KRMU Cybersecurity Student Chapter. All Rights Reserved.</p>
+                <strong>Cybersecurity Student Chapter</strong>
+                <p class="footer-subtext">School of Engineering & Technology — K.R. Mangalam University</p>
             </div>
             <div class="footer-right">
                 <a href="#about">About</a>
                 <a href="#events">Programs</a>
-                <a href="#complaints">Compliance</a>
+                <a href="#leaderboard">Standings</a>
+                <a href="#complaints">Grievances</a>
             </div>
         </div>
     </footer>
 
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script>
+        function toggleContactFields(value) {
+            const fields = document.getElementById('contactFields');
+            fields.style.display = value === 'Identified' ? 'block' : 'none';
+        }
+
+        function redirectToForm(type) {
+            alert('Registration portal for ' + type + ' will open shortly.');
+        }
+
+        async function submitComplaint(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('complaintForm');
+            const alertBox = document.getElementById('formAlert');
+            const submitBtn = document.getElementById('submitBtn');
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Transmitting Report...';
+            alertBox.style.display = 'none';
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alertBox.className = 'alert-box alert-success';
+                    alertBox.innerText = 'Grievance ticket successfully submitted! An email notification has been dispatched to the advisory board.';
+                    alertBox.style.display = 'block';
+                    form.reset();
+                    toggleContactFields('Anonymous');
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                alertBox.className = 'alert-box alert-danger';
+                alertBox.innerText = 'Submission failed. Please verify your Web3Forms access key or network connection.';
+                alertBox.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Submit Report Securely';
+            }
+        }
+    </script>
 </body>
 </html>
